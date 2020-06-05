@@ -21,7 +21,7 @@ if __name__ == '__main__':
     # Load model
     z_dim = 100
     generator = Generator(z_dim).cuda()
-    generator.load_state_dict(torch.load(args.checkpoint))
+    generator.load_state_dict(torch.load(args.checkpoint, map_location = 'cuda:0'))
     generator.eval()
 
     # Generate images and save the results
