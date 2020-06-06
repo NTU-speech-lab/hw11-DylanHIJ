@@ -19,7 +19,7 @@ if __name__ == '__main__':
     # Argument parsing
     parser = argparse.ArgumentParser()
     parser.add_argument('--gpu', '-g', type = int, help = 'GPU device to be trained on')
-    parser.add_argument('--checkpoint', help = 'Path of checkpoint')
+    parser.add_argument('--checkpoint', '-c',  help = 'Path of checkpoint')
     parser.add_argument('--input_dir', '-i', help = 'Directory of input images')
     args = parser.parse_args()
     
